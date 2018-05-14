@@ -18,7 +18,7 @@ mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 mkdir -p heroku
 cd heroku
-curl $DOWNLOAD_URL | tar xJ --strip-components=1
+curl -s $DOWNLOAD_URL | tar xJ --strip-components=1
 echo "exporting PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/heroku.sh"
 mkdir -p $(dirname $PROFILE_PATH)
